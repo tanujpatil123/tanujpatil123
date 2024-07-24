@@ -16,7 +16,7 @@ async function fileToGenerativePart(file) {
 }
 
 async function run() {
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-vision-pro" });
   const prompt = "What's different between these pictures?";
 
   const fileInputEl = document.querySelector("input[type=file]");
