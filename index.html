@@ -3,13 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Generative AI Example</title>
+  <title>Chatbot Interface with Image and Text</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #chat-container {
+      width: 50%;
+      margin: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .chat-bubble {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      max-width: 70%;
+    }
+    .user-bubble {
+      background-color: #d1e7dd;
+      align-self: flex-end;
+    }
+    .bot-bubble {
+      background-color: #f8d7da;
+      align-self: flex-start;
+    }
+    #input-container {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    #prompt-input {
+      flex: 1;
+      padding: 10px;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Upload Images to Generate Text</h1>
-  <input type="file" multiple>
-  <button onclick="run()">Generate Text</button>
-  <pre id="result"></pre>
+  <div id="chat-container">
+    <div id="chat-box"></div>
+    <div id="input-container">
+      <input type="file" id="image-input" multiple>
+      <input type="text" id="prompt-input" placeholder="Type your prompt here...">
+      <button onclick="run()">Send</button>
+    </div>
+  </div>
 
   <script type="module" src="app.js"></script>
 </body>
